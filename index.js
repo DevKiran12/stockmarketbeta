@@ -14,9 +14,13 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
+const otherstuff = "hello there this is other stuff!"
 
 app.get('/', function (req, res)  {
-    res.render('home');
+    res.render('home',{ 
+        stuff: otherstuff
+
+    } );
 });
 
 
