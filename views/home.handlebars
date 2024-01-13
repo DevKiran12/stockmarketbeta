@@ -1,2 +1,22 @@
-<h1> This is my Stockmarket Handlebar page </h1>
-<p>{{stock}}</p>
+{{posted_stuff}}<br/>
+
+<h1> {{stock.companyName}} {{{stock.symbol}}} </h1>
+{{!-- <p>{{stock}}</p> --}}
+<br/>
+<strong>Latest Price: </strong>${{stock.latestPrice}}<br/>
+<strong>Previous Close: </strong>${{stock.previousClose}}<br/>
+<strong>Previous Open: </strong>${{stock.iexOpen}}<br/>
+<strong>Previous High: </strong>${{stock.high}}<br/>
+<strong>Previous Low: </strong>${{stock.low}}<br/>
+<strong>Percentage Change: </strong>{{stock.changePercent}}%<br/>
+<strong>52 Week High: </strong>${{stock.week52High}}<br/>
+<strong>52 Week Low: </strong>${{stock.week52Low}}<br/>
+<strong>PE Ratio: </strong>{{stock.peRatio}}<br/>
+<strong>Year to Date Change: </strong>{{stock.ytdChange}}%<br/>
+<strong>Market Capitalisation: </strong>{{stock.marketCap}}<br/>
+
+<br/><br/>
+
+{{!-- {{#each stock}}
+    {{@key}}|{{this}}<br/>
+{{/each}} --}}
